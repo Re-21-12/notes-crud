@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useNavigate, useParams, Link } from "react-router-dom";
 import { useRatingContext } from "./context/GlobalState";
 import { VictoryPie, VictoryLabel } from "victory";

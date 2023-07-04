@@ -1,4 +1,3 @@
-import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { RatingForm } from "./components/RatingForm";
 import { RatingContextProvider } from "./components/context/GlobalState";

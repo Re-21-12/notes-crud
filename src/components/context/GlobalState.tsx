@@ -1,4 +1,9 @@
-import React, { createContext, useState, useContext, useEffect } from "react";
+import React, { createContext, useState, useContext, useEffect, ReactNode } from "react";
+
+//definir children?
+interface RatingContextProviderProps {
+  children: ReactNode;
+}
 
 // Definir tipos
 interface Rating {
@@ -27,7 +32,7 @@ interface   RatingState {
 const RatingContext = createContext<RatingState | undefined>(undefined);
 
 // Crear el proveedor del contexto
-const RatingContextProvider: React.FC = ({ children }) => {
+const RatingContextProvider:React.FC<RatingContextProviderProps>  = ({ children }) => {
   //se declara el estado va a empezar con un arreglo vacio- > lo cual es un un arreglo de objetos
   //Ejemplo: const ratings =  [{id: 0, quantity: 200, name: "victor", description: "string", date:Date},{id: 0, quantity: 200, name: "victor", description: "string", date:Date},]
   const [ratings, setRatings] = useState<Rating[]>([]);
